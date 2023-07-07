@@ -1,6 +1,6 @@
-FROM nginx:1.17-alpine
+FROM nginx:1.24-alpine
 
-RUN apk add --update --no-cache openssl-dev libffi-dev  musl-dev python3-dev py3-pip gcc openssl bash && \
+RUN apk add --update --no-cache openssl-dev libffi-dev  musl-dev python3-dev py3-pip gcc openssl bash rust && \
   ln -fs /dev/stdout /var/log/nginx/access.log && \
   ln -fs /dev/stdout /var/log/nginx/error.log
 
